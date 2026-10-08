@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voleibol</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- Encabezado de la página -->
+<header>
+    <h1>El Mundo del Voleibol</h1>
+</header>
+
+<!-- Menú de navegación -->
+<nav>
+    <ul>
+        <li><a href="#">Historia del voleibol</a></li>
+        <li><a href="#">Partidos y resultados</a></li>
+        <li><a href="#">Jugadores y noticias</a></li>
+    </ul>
+</nav>
+
+<!-- Contenedor principal -->
+<div class="contenedor">
+
+    <!-- Sección principal -->
+    <section>
+
+        <h2>Noticias de Voleibol</h2>
+
+        <article>
+            <h3>El voleibol: un deporte de equipo</h3>
+
+            <p>
+                El <b>voleibol</b> es un deporte en el que dos equipos
+                compiten separados por una red. El objetivo es enviar
+                el balón al campo contrario y evitar que toque el suelo
+                de nuestro propio campo.
+            </p>
+
+            <blockquote>
+                "El voleibol es un deporte que requiere esfuerzo,
+                concentración, disciplina y trabajo en equipo".
+            </blockquote>
+
+            <p>
+                <mark>Voleibol</mark> |
+                <small>Información deportiva</small>
+            </p>
+        </article>
+
+
+        <article>
+            <h3>Los jugadores se preparan para competir</h3>
+
+            <p>
+                Los <b>jugadores de voleibol</b> entrenan diariamente
+                para mejorar sus habilidades, su condición física y
+                su coordinación durante los partidos.
+            </p>
+
+            <p>
+                Algunas de las principales técnicas son el
+                <b>saque, pase, recepción, colocación, remate y bloqueo</b>.
+            </p>
+
+            <p>
+                La <mark>afición</mark> juega un papel importante,
+                apoyando a los equipos durante los partidos y
+                celebrando cada punto conseguido.
+            </p>
+
+            <p>
+                <del>Los jugadores no estaban preparados.</del>
+                <ins>Los jugadores continúan entrenando para mejorar
+                su rendimiento.</ins>
+            </p>
+
+            <p>
+                <small>Publicado por: Noticias Deportivas | Voleibol</small>
+            </p>
+        </article>
+
+
+        <!-- Datos relevantes -->
+        <h2>Datos Relevantes</h2>
+
+        <table>
+            <tr>
+                <th>Aspecto</th>
+                <th>Descripción</th>
+                <th>Importancia</th>
+            </tr>
+
+            <tr>
+                <td>Jugadores</td>
+                <td>Seis jugadores por equipo</td>
+                <td>Trabajo en equipo</td>
+            </tr>
+
+            <tr>
+                <td>Cancha</td>
+                <td>Dividida por una red</td>
+                <td>Permite desarrollar el juego</td>
+            </tr>
+
+            <tr>
+                <td>Balón</td>
+                <td>Esférico y ligero</td>
+                <td>Elemento principal del juego</td>
+            </tr>
+        </table>
+
+
+        <!-- Video -->
+        <h2>Video Destacado</h2>
+
+        <p>
+            Observa un video relacionado con el voleibol y aprende
+            más sobre este emocionante deporte:
+        </p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/-7KLg7YXkZA"
+            title="Video sobre voleibol"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+
+        <!-- Formulario -->
+        <h2>Contáctenos</h2>
+
+        <form action="#" method="post">
+
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+    </section>
+
+
+    <!-- Aside -->
+    <aside>
+
+        <h2>Imágenes del Día</h2>
+
+        <figure>
+            <img src="voleibol.webp"
+                 alt="Jugadores jugando voleibol"
+                 width="300"
+                 height="300">
+
+            <figcaption>
+                Jugadores compitiendo en un partido de voleibol
+            </figcaption>
+        </figure>
+
+
+        <h2>Glosario</h2>
+
+        <dl>
+
+            <dt>Voleibol</dt>
+            <dd>
+                Deporte en el que dos equipos intentan enviar
+                un balón por encima de una red.
+            </dd>
+
+            <dt>Saque</dt>
+            <dd>
+                Golpe que inicia una jugada y pone el balón
+                en juego.
+            </dd>
+
+            <dt>Remate</dt>
+            <dd>
+                Golpe fuerte que se realiza para intentar
+                conseguir un punto.
+            </dd>
+
+            <dt>Bloqueo</dt>
+            <dd>
+                Acción defensiva que busca detener el balón
+                enviado por el equipo contrario.
+            </dd>
+
+        </dl>
+
+    </aside>
+
+</div>
+
+
+<!-- Pie de página -->
+<footer>
+    <p>Todos los derechos reservados 4to B, 2026-2027</p>
+</footer>
+
+</body>
+</html>

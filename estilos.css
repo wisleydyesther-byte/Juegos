@@ -1,0 +1,217 @@
+```css
+/* 1. Estilos generales de la página */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* 2. Encabezado */
+
+header {
+    background-color: #86888a;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 6px solid #85ddf3;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 32px;
+}
+
+/* 3. Menú de navegación */
+
+nav {
+    background-color: #0f0f0f;
+    padding: 12px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #abcefc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #aac9f1;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* 4. Contenedor principal */
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 5. Sección principal */
+
+.contenedor section {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #a4c5f0;
+}
+
+/* Títulos */
+
+h2 {
+    color: #a0c5f4;
+    border-bottom: 3px solid #f1f0e8;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #99c2f7;
+}
+
+/* 6. Aside */
+
+.contenedor aside {
+    flex: 1;
+    background-color: #b0cef4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #ffd700;
+}
+
+.contenedor aside h2 {
+    color: #ffd700;
+    border-bottom: 2px solid white;
+}
+
+/* 7. Artículos */
+
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #ffd700;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+/* 8. Imágenes */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 9. Tablas */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #004aad;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #fff8cc;
+}
+
+tr:hover {
+    background-color: #ffe680;
+}
+
+/* 10. Formulario */
+
+form label {
+    font-weight: bold;
+    color: #004aad;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 8px;
+    width: 200px;
+    margin-top: 5px;
+    border: 1px solid #004aad;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #ffd700;
+    color: #b3cff4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b6cff0;
+    color: white;
+}
+
+/* 11. Pie de página */
+
+footer {
+    background-color: #b5d4fc;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    border-top: 5px solid #ffd700;
+}
+
+footer a {
+    color: #ffd700;
+}
+
+/* 12. Adaptación para celulares */
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}
+```

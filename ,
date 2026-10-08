@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glow Beauty - Belleza y Estilo</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff9fa;
+            color: #2c2225;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 80px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: #2c2225;
+        }
+
+        .logo span {
+            color: #d78398;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu a {
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #d78398;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 8% 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #fff9fa,
+                    #fdecef
+                );
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-small {
+            color: #bd6279;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(50px, 7vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d78398;
+        }
+
+        .hero p {
+            color: #777;
+            font-size: 17px;
+            max-width: 520px;
+            margin-bottom: 30px;
+        }
+
+        .botones {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-principal {
+            background: #d78398;
+            color: white;
+        }
+
+        .boton-principal:hover {
+            background: #b95d76;
+            transform: translateY(-3px);
+        }
+
+        .boton-secundario {
+            border: 2px solid #d78398;
+            color: #b95d76;
+        }
+
+        .boton-secundario:hover {
+            background: #d78398;
+            color: white;
+        }
+
+
+        /* =========================
+           IMAGEN PRINCIPAL
+        ========================= */
+
+        .hero-imagen {
+            width: 480px;
+            height: 480px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            border: 12px solid white;
+
+            box-shadow:
+                0 25px 60px rgba(100,40,50,0.18);
+        }
+
+        .hero-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .titulo p {
+            color: #c56880;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .titulo h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 8px 0 15px;
+        }
+
+        .linea {
+            width: 60px;
+            height: 3px;
+            background: #d78398;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        .servicios {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .servicio {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 35px rgba(50,20,30,0.07);
+
+            transition: 0.3s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+        }
+
+        .icono {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            margin-bottom: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #fff0f3;
+            color: #d78398;
+
+            font-size: 27px;
+        }
+
+        .servicio h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .servicio p {
+            color: #777;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        #productos {
+            background: #fff0f3;
+        }
+
+        .productos {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-8px);
+        }
+
+        .producto-imagen {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .producto:hover img {
+            transform: scale(1.08);
+        }
+
+        .producto-info {
+            padding: 25px;
+        }
+
+        .producto-info small {
+            color: #c56880;
+            letter-spacing: 2px;
+        }
+
+        .producto-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+        }
+
+        .estrellas {
+            color: #e4a52d;
+            margin: 8px 0;
+        }
+
+        .precio {
+            color: #bd6279;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           NOSOTROS
+        ========================= */
+
+        .nosotros {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+            align-items: center;
+        }
+
+        .nosotros-imagen {
+            height: 550px;
+            overflow: hidden;
+
+            border-radius:
+                200px 200px 25px 25px;
+        }
+
+        .nosotros-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nosotros-texto h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .nosotros-texto h2 span {
+            color: #d78398;
+        }
+
+        .nosotros-texto p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .lista {
+            margin-top: 25px;
+            list-style: none;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .lista i {
+            color: #d78398;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           ESTADÍSTICAS
+        ========================= */
+
+        .estadisticas {
+            background: #2c2225;
+            color: white;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            text-align: center;
+            gap: 30px;
+        }
+
+        .estadistica i {
+            color: #d78398;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .estadistica h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+        }
+
+        .estadistica p {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           TESTIMONIOS
+        ========================= */
+
+        .testimonios {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonio {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 35px rgba(50,20,30,0.06);
+        }
+
+        .comillas {
+            color: #d78398;
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+        }
+
+        .testimonio p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .cliente {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f9d8df;
+            color: #b95d76;
+
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        #contacto {
+            background: #fff0f3;
+        }
+
+        .contacto {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+        }
+
+        .contacto h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .contacto h2 span {
+            color: #d78398;
+        }
+
+        .contacto-texto p {
+            color: #777;
+        }
+
+        .dato {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .dato i {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: white;
+            color: #d78398;
+        }
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(50,20,30,0.1);
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        .campo label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .campo input,
+        .campo textarea,
+        .campo select {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #eee;
+            border-radius: 10px;
+
+            outline: none;
+
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .campo input:focus,
+        .campo textarea:focus,
+        .campo select:focus {
+            border-color: #d78398;
+        }
+
+        .enviar {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #21191c;
+            color: white;
+            padding: 60px 8% 20px;
+            text-align: center;
+        }
+
+        footer .logo {
+            color: white;
+        }
+
+        footer p {
+            color: #999;
+            margin: 15px auto;
+            max-width: 450px;
+            font-size: 13px;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0 40px;
+        }
+
+        .redes a {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.08);
+
+            transition: 0.3s;
+        }
+
+        .redes a:hover {
+            background: #d78398;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #777;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .menu {
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .botones {
+                justify-content: center;
+            }
+
+            .hero-imagen {
+                width: 400px;
+                height: 400px;
+            }
+
+            .servicios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .productos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nosotros {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacto {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+                height: 70px;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                padding:
+                    120px 20px 70px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero-imagen {
+                width: 320px;
+                height: 320px;
+            }
+
+            section {
+                padding:
+                    75px 20px;
+            }
+
+            .titulo h2 {
+                font-size: 38px;
+            }
+
+            .servicios-grid,
+            .productos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nosotros {
+                padding: 0;
+            }
+
+            .nosotros-imagen {
+                height: 400px;
+            }
+
+            .nosotros-texto h2 {
+                font-size: 42px;
+            }
+
+            .estadisticas {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 60px 20px;
+            }
+
+            .contacto h2 {
+                font-size: 45px;
+            }
+
+            form {
+                padding: 25px;
+            }
+
+            footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENÚ
+    ========================= -->
+
+    <header>
+
+        <nav>
+
+            <a href="#inicio" class="logo">
+                Glow<span>Beauty</span>
+            </a>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#servicios">Servicios</a>
+                </li>
+
+                <li>
+                    <a href="#productos">Productos</a>
+                </li>
+
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         INICIO
+    ========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <div class="hero-small">
+                ✨ BELLEZA • ESTILO • CONFIANZA
+            </div>
+
+            <h1>
+                Descubre tu
+                <span>mejor versión</span>
+            </h1>
+
+            <p>
+                Cuidamos de ti para que puedas sentirte
+                hermosa, segura y radiante todos los días.
+            </p>
+
+            <div class="botones">
+
+                <a href="#servicios"
+                   class="boton boton-principal">
+                    Ver servicios
+                </a>
+
+                <a href="#contacto"
+                   class="boton boton-secundario">
+                    Reservar cita
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-imagen">
+
+            <img
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
+                alt="Mujer en salón de belleza">
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
+    <section id="servicios">
+
+        <div class="servicios">
+
+            <div class="titulo">
+
+                <p>NUESTROS SERVICIOS</p>
+
+                <h2>
+                    Todo para tu belleza
+                </h2>
+
+                <div class="linea"></div>
+
+            </div>
+
+
+            <div class="servicios-grid">
+
+
+                <div class="servicio">
+
+                    <div class="icono">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+
+                    <h3>Cabello</h3>
+
+                    <p>
+                        Cortes, peinados, tratamientos
+                        y estilos personalizados.
+                    </p>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="icono">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+
+                    <h3>Manicure</h3>
+
+                    <p>
+                        Cuidado profesional de uñas
+                        con diseños elegantes.
+                    </p>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="icono">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+
+                    <h3>Maquillaje</h3>
+
+                    <p>
+                        Maquillaje para eventos,
+                        fiestas y ocasiones especiales.
+                    </p>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="icono">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+
+                    <h3>Skincare</h3>
+
+                    <p>
+                        Tratamientos faciales para
+                        una piel radiante.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================= -->
+
+    <section id="productos">
+
+        <div class="productos">
+
+            <div class="titulo">
+
+                <p>NUESTRA COLECCIÓN</p>
+
+                <h2>
+                    Productos favoritos
+                </h2>
+
+                <div class="linea"></div>
+
+            </div>
+
+
+            <div class="productos-grid">
+
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+                            alt="Productos de maquillaje">
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <small>MAQUILLAJE</small>
+
+                        <h3>
+                            Glow Makeup Set
+                        </h3>
+
+                        <div class="estrellas">
+                            ★★★★★
+                        </div>
+
+                        <div class="precio">
+                            $35.00
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=80"
+                            alt="Productos skincare">
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <small>SKINCARE</small>
+
+                        <h3>
+                            Radiant Skin Serum
+                        </h3>
+
+                        <div class="estrellas">
+                            ★★★★★
+                        </div>
+
+                        <div class="precio">
+                            $28.00
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <div class="producto-imagen">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
+                            alt="Perfume">
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <small>FRAGANCIAS</small>
+
+                        <h3>
+                            Elegant Rose Perfume
+                        </h3>
+
+                        <div class="estrellas">
+                            ★★★★★
+                        </div>
+
+                        <div class="precio">
+                            $42.00
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================= -->
+
+    <section id="nosotros">
+
+        <div class="nosotros">
+
+            <div class="nosotros-imagen">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80"
+                    alt="Salón de belleza">
+
+            </div>
+
+
+            <div class="nosotros-texto">
+
+                <div class="hero-small">
+                    SOBRE NOSOTROS
+                </div>
+
+                <h2>
+                    Belleza que comienza
+                    <span>desde adentro</span>
+                </h2>
+
+                <p>
+                    En Glow Beauty creemos que la belleza no
+                    solamente se trata de cómo te ves, sino
+                    también de cómo te sientes.
+                </p>
+
+                <p>
+                    Creamos un espacio donde puedas relajarte,
+                    cuidarte y disfrutar de una experiencia
+                    especial.
+                </p>
+
+
+                <ul class="lista">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Profesionales expertos
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Productos de calidad
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Atención personalizada
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ESTADÍSTICAS
+    ========================= -->
+
+    <section class="estadisticas">
+
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>500+</h3>
+
+            <p>
+                Clientes felices
+            </p>
+
+        </div>
+
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>4.9</h3>
+
+            <p>
+                Calificación
+            </p>
+
+        </div>
+
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>10+</h3>
+
+            <p>
+                Años de experiencia
+            </p>
+
+        </div>
+
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>100%</h3>
+
+            <p>
+                Dedicación
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         TESTIMONIOS
+    ========================= -->
+
+    <section>
+
+        <div class="testimonios">
+
+            <div class="titulo">
+
+                <p>OPINIONES</p>
+
+                <h2>
+                    Lo que dicen nuestras clientes
+                </h2>
+
+                <div class="linea"></div>
+
+            </div>
+
+
+            <div class="testimonios-grid">
+
+
+                <div class="testimonio">
+
+                    <div class="comillas">
+                        “
+                    </div>
+
+                    <p>
+                        Me encantó la experiencia.
+                        El personal fue súper amable
+                        y el resultado quedó increíble.
+                    </p>
+
+                    <div class="cliente">
+
+                        <div class="avatar">
+                            M
+                        </div>
+
+                        <strong>
+                            María López
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonio">
+
+                    <div class="comillas">
+                        “
+                    </div>
+
+                    <p>
+                        El mejor lugar para consentirme.
+                        Siempre salgo feliz y con mucha
+                        más confianza.
+                    </p>
+
+                    <div class="cliente">
+
+                        <div class="avatar">
+                            A
+                        </div>
+
+                        <strong>
+                            Ana Rodríguez
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonio">
+
+                    <div class="comillas">
+                        “
+                    </div>
+
+                    <p>
+                        Excelente atención, productos
+                        de calidad y un ambiente hermoso.
+                    </p>
+
+                    <div class="cliente">
+
+                        <div class="avatar">
+                            C
+                        </div>
+
+                        <strong>
+                            Carla Martínez
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section id="contacto">
+
+        <div class="contacto">
+
+
+            <div class="contacto-texto">
+
+                <div class="hero-small">
+                    CONTÁCTANOS
+                </div>
+
+                <h2>
+                    Reserva tu
+                    <span>cita</span>
+                </h2>
+
+                <p>
+                    Déjanos tus datos y nos pondremos
+                    en contacto contigo.
+                </p>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <strong>Ubicación</strong>
+
+                        <p>
+                            Santo Domingo,
+                            República Dominicana
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+                        <strong>Teléfono</strong>
+
+                        <p>
+                            +1 809 000 0000
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+                        <strong>Email</strong>
+
+                        <p>
+                            hola@glowbeauty.com
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form>
+
+                <div class="campo">
+
+                    <label>
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Tu nombre"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="tu@email.com"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Servicio
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Selecciona un servicio
+                        </option>
+
+                        <option>
+                            Cabello
+                        </option>
+
+                        <option>
+                            Manicure
+                        </option>
+
+                        <option>
+                            Maquillaje
+                        </option>
+
+                        <option>
+                            Skincare
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        placeholder="Escribe tu mensaje...">
+                    </textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton boton-principal enviar">
+
+                    Enviar solicitud
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <div class="logo">
+            Glow<span>Beauty</span>
+        </div>
+
+        <p>
+            Belleza, estilo y confianza en un solo lugar.
+        </p>
+
+
+        <div class="redes">
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Glow Beauty.
+            Todos los derechos reservados.
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
